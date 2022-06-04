@@ -4,7 +4,7 @@ import moment from 'moment';
 import './transaction.scss';
 
 const Transaction = ({rate, time, amount, to, from}) => {
-  const assets = `${from} ⟶ ${to}`;
+  const assets = `${from}⟶${to}`;
   const date = moment(time).format('ll').split(',')[0];
   const hours = moment(time).format('LT').split(' ')[0];
   const sum = new Intl.NumberFormat('en-gb').format(amount);
